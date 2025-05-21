@@ -2,11 +2,17 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: clone of a snowflake database
     database: raw
     schema: jaffle_shop
     tables:
       - name: customers
+        description: raw customer data 
+        columns:
+          - name: id
+            description: primary key of customer data 
       - name: orders
+        description: raw orders data 
         freshness: 
           error_after: {count: 6, period: day}
           warn_after: {count: 48, period: day}
