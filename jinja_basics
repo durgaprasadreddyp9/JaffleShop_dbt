@@ -1,0 +1,34 @@
+{# 
+
+{% set my_cool_string = 'wow! cool' %}
+
+{{ my_cool_string }} dp
+
+
+
+{% set my_animal = ['cat', 'dog'] %}
+
+{{ my_animal[0] }}
+
+{% for animal in my_animal %}
+
+    my favourite animal is {{ animal }}
+
+{% endfor %}
+
+#}
+
+{% set temperature = 45 %}
+
+{% if temperature < 65 %}
+    time for a cappuccino
+{% else %}
+    time for cold brew 
+
+{% endif %}
+
+{% for i in range(10) %}
+
+    select {{ i }} as number {% if not loop.last %} union all {% endif %}
+
+{% endfor %}

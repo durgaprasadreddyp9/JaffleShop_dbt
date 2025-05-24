@@ -3,6 +3,6 @@ select
     ORDERID as order_id,
     PAYMENTMETHOD as payment_method,
     STATUS,
-    AMOUNT /100 as amount,
+    {{ cents_to_dollars('amount',4) }} as amount,
     CREATED as created_at
 from {{ source('stripe', 'payment') }}
